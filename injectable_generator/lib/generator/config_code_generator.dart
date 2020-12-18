@@ -76,10 +76,10 @@ class ConfigCodeGenerator {
 
     if (_hasAsync(sorted)) {
       _writeln(
-          "Future<GetIt> $initializerName($getItParam {String environment, EnvironmentFilter environmentFilter,}) async {");
+          "Future<GetIt> $initializerName($getItParam {String? environment, EnvironmentFilter? environmentFilter,}) async {");
     } else {
       _writeln(
-          "GetIt $initializerName($getItParam {String environment, EnvironmentFilter environmentFilter,}) {");
+          "GetIt $initializerName($getItParam {String? environment, EnvironmentFilter? environmentFilter,}) {");
     }
     _writeln(
         "final gh = GetItHelper($getOrThis, environment, environmentFilter);");
